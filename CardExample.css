@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+/* body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffffff;
+} */
+
+.container1{
+  position: relative;
+  width: 250px;
+  margin-right: 3%;
+  margin-top: 4%;
+}
+
+.container1 .card1{
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background: whitesmoke;
+  border-radius: 20px;
+  overflow: visible;
+}
+
+.container1 .card1:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 350px;
+  background: #be9b7b;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.container1 .card1:hover:before{
+  clip-path: circle(300px at 80% -20%);
+}
+
+.container1 .card1:after{
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 8em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255,255,25,0.05)
+}
+
+.container1 .card1 .imgBx{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 150px;
+  transition: 0.5s;
+}
+
+.container1 .card1:hover .imgBx{
+  top: 0%;
+  transform: translateY(0%);
+    
+}
+
+.container1 .card1 .imgBx img{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 100px;
+}
+
+.container1 .card1 .contentBx{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 211px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.container1 .card1:hover .contentBx{
+  height: 211px;
+}
+
+.container1 .card1 .contentBx h2{
+  position: relative;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #333;
+  margin: 0;
+  transform: translateY(100px);
+}
+
+.container1 .card1:hover .contentBx h2{
+  transform: translateY(0px);
+  transition-delay: 0.4s;
+}
+
+.container1 .card1 .contentBx .f-s{
+  font-size: 10px;
+  line-height: 18px;
+  word-spacing: 0px;
+  transform: translateY(100px);
+}
+
+.container1 .card1:hover .contentBx .f-s{
+  transform: translateY(0px);
+  transition-delay: 0.4s;
+}
+
+.container1 .card1 .contentBx .size, .container1 .card1 .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container1 .card1:hover .contentBx .size{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.container1 .card1:hover .contentBx .color{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.container1 .card1 .contentBx .size h3, .container1 .card1 .contentBx .color h3{
+  color: #333;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+  margin-top: 2%;
+}
+
+.container1 .card1 .contentBx .size button{
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+.container1 .card1 .contentBx .size button:hover{
+  background: burlywood;
+}
+
+.container1 .card1 .contentBx .shop-item-button{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  /* margin-top: 10px; */
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(0px);
+  transition: 0.5s;
+  /* margin-top: 2%; */
+  border: none;
+}
+
+.container1 .card1:hover .contentBx .shop-item-button{
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
